@@ -17,7 +17,7 @@ public class Intersection {
 
     public boolean compareIntervals(Interval a, Interval b)
     {
-        return false;
+        return true;
     }
 
 }
