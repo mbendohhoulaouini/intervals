@@ -13,7 +13,7 @@ public class Min {
   }
 
   public boolean isOpen(){
-    return false;
+    return true;
   }
 
   @Override

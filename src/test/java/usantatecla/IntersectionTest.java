@@ -42,7 +42,7 @@ public class IntersectionTest {
         Interval interval =intersection.calculateIntersection(intervalOne, intervalTwo);
         assertEquals(1.5, interval.getMin().value);
         assertEquals(3.6, interval.getMax().value);
-        assertFalse(interval.getMin().isOpen());
-        assertTrue(interval.getMax().isOpen());
+        assertTrue(interval.getMin().isOpen());
+        assertFalse(interval.getMax().isOpen());
     }
 }
