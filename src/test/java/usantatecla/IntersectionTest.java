@@ -18,7 +18,7 @@ public class IntersectionTest {
         Intersection intersection =new Intersection(intervalOne, intervalTwo);
         Interval interval =intersection.calculateIntersection(intervalOne, intervalTwo);
         assertEquals(-2.2, interval.getMin().value);
-        assertEquals(4.4, interval.getMax().value);
+        assertEquals(3.6, interval.getMax().value);
 
     }
 }
