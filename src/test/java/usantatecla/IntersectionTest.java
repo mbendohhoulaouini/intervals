@@ -16,7 +16,7 @@ public class IntersectionTest {
         Interval intervalOne = new IntervalBuilder().open(leftOne.getEquals()).closed(rightOne.getEquals()).build();
         Interval intervalTwo = new IntervalBuilder().open(leftTwo.getEquals()).closed(rightTwo.getEquals()).build();
         Intersection intersection =new Intersection(intervalOne, intervalTwo);
-        Interval interval =intersection.calculateIntersection(intervalOne, intervalTwo);
+        Interval interval =intersection.calculateIntersection();
         assertEquals(1.5, interval.getMin().value);
         assertEquals(3.6, interval.getMax().value);
 
@@ -27,7 +27,7 @@ public class IntersectionTest {
         Interval intervalOne = new IntervalBuilder().open(leftOne.getEquals()).closed(rightOne.getEquals()).build();
         Interval intervalTwo = new IntervalBuilder().open(leftTwo.getEquals()).closed(rightTwo.getEquals()).build();
         Intersection intersection =new Intersection(intervalOne, intervalTwo);
-        Interval interval =intersection.calculateIntersection(intervalOne, intervalTwo);
+        Interval interval =intersection.calculateIntersection();
         assertEquals(1.5, interval.getMin().value);
         assertEquals(3.6, interval.getMax().value);
         assertTrue(interval.getMin().isOpen());
@@ -39,7 +39,7 @@ public class IntersectionTest {
         Interval intervalOne = new IntervalBuilder().open(leftOne.getEquals()).closed(rightOne.getEquals()).build();
         Interval intervalTwo = new IntervalBuilder().open(leftTwo.getEquals()).closed(rightTwo.getEquals()).build();
         Intersection intersection =new Intersection(intervalOne, intervalTwo);
-        Interval interval =intersection.calculateIntersection(intervalOne, intervalTwo);
+        Interval interval =intersection.calculateIntersection();
         assertEquals(1.5, interval.getMin().value);
         assertEquals(3.6, interval.getMax().value);
         assertTrue(interval.getMin().isOpen());

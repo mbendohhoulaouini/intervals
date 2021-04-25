@@ -11,20 +11,20 @@ public class Intersection {
         this.intervalTwo=intervalTwo;
     }
 
-    public Interval calculateIntersection(Interval intervalOne, Interval intervalTwo){
+    public Interval calculateIntersection(){
         Interval result = null;
-        if(this.compareIntervals(intervalOne, intervalTwo)){
-            Min min=(intervalOne.getMin().value >= intervalTwo.getMin().value) ? intervalOne.getMin(): intervalTwo.getMin();
-            Max max=(intervalOne.getMax().value <= intervalTwo.getMax().value) ? intervalOne.getMax() :intervalTwo.getMax();
+        if(this.compareIntervals()){
+            Min min=(this.intervalOne.getMin().value >= this.intervalTwo.getMin().value) ? this.intervalOne.getMin(): this.intervalTwo.getMin();
+            Max max=(this.intervalOne.getMax().value <= this.intervalTwo.getMax().value) ? this.intervalOne.getMax() :this.intervalTwo.getMax();
             result = new Interval(min, max);
         }
 
         return result;
     }
 
-    public boolean compareIntervals(Interval intervalOne, Interval intervalTwo)
+    public boolean compareIntervals()
     {
-        return Math.max(intervalOne.getMin().value, intervalTwo.getMin().value)<=Math.min(intervalOne.getMax().value, intervalTwo.getMax().value);
+        return Math.max(this.intervalOne.getMin().value, this.intervalTwo.getMin().value)<=Math.min(this.intervalOne.getMax().value, this.intervalTwo.getMax().value);
     }
 
 }
