@@ -11,7 +11,12 @@ public class ClosedMax extends Max {
     return super.isWithin(value) || this.value == value;
   }
 
-  @Override
+    @Override
+    public boolean isOpen() {
+        return false;
+    }
+
+    @Override
 	public String toString() {
 		return this.value + "]";
 	}	

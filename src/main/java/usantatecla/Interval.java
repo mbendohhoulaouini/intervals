@@ -12,7 +12,15 @@ public class Interval {
 	}
 
 	public boolean include(double value) {
-			return this.min.isWithin(value) && this.max.isWithin(value);
+		return this.min.isWithin(value) && this.max.isWithin(value);
+	}
+
+	public Min getMin() {
+		return min;
+	}
+
+	public Max getMax() {
+		return max;
 	}
 
 	@Override

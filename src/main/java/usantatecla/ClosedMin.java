@@ -12,6 +12,11 @@ public class ClosedMin extends Min {
   }
 
   @Override
+  public boolean isOpen() {
+    return false;
+  }
+
+  @Override
 	public String toString() {
 		return "[" + this.value;
   }	
