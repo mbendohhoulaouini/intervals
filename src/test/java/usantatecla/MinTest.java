@@ -35,6 +35,10 @@ public class MinTest {
   public void givenMinWhenIsWithinWithGreaterValueThenTrue(){
     assertTrue(this.min.isWithin(this.point.getGreater()));
   }
- 
+
+  @Test
+  public void givenMinWhenIsOpenOrClosed(){
+    assertTrue(this.min.isOpen());
+  }
 }
 

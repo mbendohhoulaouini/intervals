@@ -2,6 +2,7 @@ package usantatecla;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ClosedMinTest extends MinTest {
@@ -16,5 +17,10 @@ public class ClosedMinTest extends MinTest {
   public void givenMinWhenIsWithinWithEqualsValue(){
     assertTrue(this.min.isWithin(this.point.getEquals()));
   }
-  
+
+  @Test
+  @Override
+  public void givenMinWhenIsOpenOrClosed() {
+    assertFalse(this.min.isOpen());
+  }
 }

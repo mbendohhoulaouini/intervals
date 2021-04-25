@@ -35,5 +35,9 @@ public class MaxTest {
   public void givenMaxWhenIsWithinWithGreaterValueThenTrue(){
     assertFalse(this.max.isWithin(this.point.getGreater()));
   }
- 
+
+  @Test
+  public void givenMaxWhenIsOpenOrClosed(){
+    assertTrue(this.max.isOpen());
+  }
 }

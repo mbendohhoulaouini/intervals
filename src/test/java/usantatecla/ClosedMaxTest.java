@@ -1,5 +1,6 @@
 package usantatecla;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -16,5 +17,9 @@ public class ClosedMaxTest extends MaxTest {
   public void givenMaxWhenIsWithinWithEqualsValue(){
     assertTrue(this.max.isWithin(this.point.getEquals()));
   }
-  
+
+  @Override
+  public void givenMaxWhenIsOpenOrClosed() {
+    assertFalse(this.max.isOpen());
+  }
 }
